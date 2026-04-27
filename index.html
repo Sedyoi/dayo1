@@ -1,0 +1,67 @@
+
+
+</html><!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Моє резюме</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <header class="card">
+    <h1>Макс</h1>
+    <p>Студент кібербезпеки</p>
+
+    <button id="theme-toggle">Темна тема</button>
+    <button onclick="openModal()">✉️ Відгук</button>
+  </header>
+
+  <section class="card">
+    <h2>Досвід</h2>
+    <p>Навчання, лабораторні роботи, практики</p>
+  </section>
+
+  <section class="card">
+    <h2>Освіта</h2>
+    <p>Львівська політехніка</p>
+  </section>
+
+  <section class="card">
+    <h2>Відгуки</h2>
+    <div id="comments"></div>
+  </section>
+
+  <footer class="card" id="system-info"></footer>
+
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+
+    <h3>Зворотній зв'язок</h3>
+    <form 
+      id="comment-form"
+      action="https://formspree.io/f/xdapyldk"
+      method="POST"
+    >
+
+      <input name="name" placeholder="Ім'я" required>
+      <input name="email" placeholder="Email" required>
+      <input name="phone" placeholder="Телефон" required>
+      <textarea name="message" placeholder="Повідомлення" required></textarea>
+
+      <button type="submit">Відправити</button>
+      <button type="button" id="close-btn">Закрити</button>
+
+    </form>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
